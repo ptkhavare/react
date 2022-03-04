@@ -4,14 +4,14 @@ import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 
 function ExpenseItem(props) {
-
-//state
+  //state
+  //useState can be called only once.
   const [title, setTitle] = useState(props.title);
 
   const clickHandler = () => {
     setTitle("Updated!");
     console.log("Clicked");
-  }
+  };
 
   //only one root component allowed in jsx
   return (
