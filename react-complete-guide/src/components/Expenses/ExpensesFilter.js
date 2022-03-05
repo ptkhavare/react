@@ -3,8 +3,6 @@ import "./ExpensesFilter.css";
 
 const ExpensesFilter = (props) => {
   const onYearChangeHandler = (event) => {
-    console.log("In Expense Filter");
-    console.log(event.target.value);
     props.onYearSelect(event.target.value);
   };
 

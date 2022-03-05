@@ -19,15 +19,14 @@ function ExpenseForm(props) {
   };
 
   const submitHandler = (event) => {
-    event.preventDefault();
-
+      event.preventDefault();
+      
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
       date: new Date(enteredDate),
-    };
-    console.log("In Expense Form");
-    console.log(expenseData);
+      };
+      
     props.onSaveExpense(expenseData);
     setEnteredTitle("");
     setEnteredAmount("");
