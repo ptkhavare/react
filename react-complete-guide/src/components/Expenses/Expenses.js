@@ -17,7 +17,10 @@ function Expenses(props) {
         onYearSelect={onYearSelectHandler}
       />
       {props.items.map((e) => (
-        <ExpenseItem title={e.title} amount={e.amount} date={e.date} />
+        <ExpenseItem
+          title={e.title}
+          amount={e.amount}
+          date={e.date} />
       ))}
       ;
     </Card>
