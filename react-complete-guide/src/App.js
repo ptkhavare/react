@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
   const ExpenseItems = [
@@ -29,9 +30,15 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
+
+  const onAddExpenseHandler = (addedExpenseData) => {
+    console.log("In App");
+    console.log(addedExpenseData);
+  };
+
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense onAddExpense={onAddExpenseHandler} />
       <Expenses items={ExpenseItems} />
     </div>
   );
