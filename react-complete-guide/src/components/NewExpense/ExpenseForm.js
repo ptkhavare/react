@@ -19,14 +19,15 @@ function ExpenseForm(props) {
   };
 
   const submitHandler = (event) => {
-      event.preventDefault();
-      
+    event.preventDefault();
+
     const expenseData = {
+      id: Math.random().toString(),
       title: enteredTitle,
       amount: enteredAmount,
       date: new Date(enteredDate),
-      };
-      
+    };
+
     props.onSaveExpense(expenseData);
     setEnteredTitle("");
     setEnteredAmount("");
